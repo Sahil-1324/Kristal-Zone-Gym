@@ -1,4 +1,3 @@
-```js
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
@@ -32,7 +31,7 @@ if (header) {
 
 
 // Hero button animation
-const heroBtn = document.querySelector(".hero-btn");
+const heroBtn = document.querySelector(".btn");
 
 if (heroBtn) {
     heroBtn.addEventListener("mouseenter", () => {
@@ -98,15 +97,10 @@ counters.forEach(counter => {
         const increment = Math.ceil(target / 100);
 
         if (count < target) {
-
             counter.innerText = count + increment;
-
             setTimeout(updateCounter, 20);
-
         } else {
-
             counter.innerText = target;
-
         }
 
     };
@@ -126,9 +120,7 @@ questions.forEach(question => {
         const answer = question.nextElementSibling;
 
         if (answer.style.maxHeight) {
-
             answer.style.maxHeight = null;
-
         } else {
 
             document.querySelectorAll(".faq-answer").forEach(item => {
@@ -136,7 +128,6 @@ questions.forEach(question => {
             });
 
             answer.style.maxHeight = answer.scrollHeight + "px";
-
         }
 
     });
@@ -186,4 +177,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-```
