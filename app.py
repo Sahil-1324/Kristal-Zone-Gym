@@ -1,8 +1,15 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import psycopg2
 import os
 
 app = Flask(__name__)
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(
+        app.static_folder,
+        "favicon.svg",
+        mimetype="image/svg+xml"
+    )
 
 
 def get_db_connection():
