@@ -207,18 +207,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header background on scroll
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        header.style.background = "rgba(0,0,0,0.95)";
-        header.style.boxShadow = "0 5px 15px rgba(0,0,0,0.4)";
-    } else {
-        header.style.background = "rgba(0,0,0,0.75)";
-        header.style.boxShadow = "none";
-    }
-});
 
 // Hero button animation
 const heroBtn = document.querySelector(".hero-btn");
